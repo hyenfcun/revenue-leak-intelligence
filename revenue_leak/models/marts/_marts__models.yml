@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: fct_revenue_leak
+    description: >
+      Order-item-level revenue leakage fact model used to quantify
+      cancellations, returns, margin losses, and reconciled direct leakage.
+
+    columns:
+      - name: order_item_id
+        description: Unique order-item identifier.
+        tests:
+          - not_null
+          - unique
+
+      - name: gross_revenue
+        description: Gross sales value represented by the order item.
+        tests:
+          - not_null
+
+      - name: direct_leak_amount
+        description: Reconciled direct leakage amount after overlap handling.
+        tests:
+          - not_null
+
+      - name: primary_leak_type
+        description: Primary leakage classification assigned to the order item.
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - Cancellation
+                  - Return
+                  - Negative Margin
+                  - No Direct Leak
+
+      - name: leak_signal_count
+        description: Number of direct leakage signals identified for the order item.
+        tests:
+          - not_null
+
