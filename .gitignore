@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment / secrets
+.env
+*.env
+*.key
+*.pem
+
+# Google Cloud / BigQuery credentials
+service-account*.json
+credentials*.json
+
+# macOS
+.DS_Store
+
+# dbt generated files
+target/
+dbt_packages/
+logs/
+
+# Raw / generated data
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Temporary files
+*.tmp
+*.log
+
+# R session history
+.Rhistory
