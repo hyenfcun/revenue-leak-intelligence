@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: int_order_items_enriched
+    description: "Enriched order-item analytical layer at one row per order item, combining revenue, cost, lifecycle, customer, product, and fulfillment context."
+
+    columns:
+      - name: order_item_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_thelook__orders')
+                field: order_id
+
+      - name: user_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_thelook__users')
+                field: user_id
+
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_thelook__products')
+                field: product_id
+
+      - name: inventory_item_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_thelook__inventory_items')
+                field: inventory_item_id
+
+      - name: sale_price
+        data_tests:
+          - not_null
+
+      - name: inventory_cost
+        data_tests:
+          - not_null
+
+      - name: gross_margin
+        data_tests:
+          - not_null
+
+      - name: gross_margin_pct
+        data_tests:
+          - not_null

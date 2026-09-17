@@ -1,0 +1,194 @@
+version: 2
+
+models:
+  - name: stg_thelook__orders
+    description: "Standardized order-level records from TheLook."
+    columns:
+      - name: order_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_thelook__users')
+                field: user_id
+
+      - name: order_status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - Shipped
+                  - Complete
+                  - Processing
+                  - Cancelled
+                  - Returned
+
+
+  - name: stg_thelook__order_items
+    description: "Item-level transactional records; one row per order item."
+    columns:
+      - name: order_item_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_thelook__orders')
+                field: order_id
+
+      - name: user_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_thelook__users')
+                field: user_id
+
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_thelook__products')
+                field: product_id
+
+      - name: inventory_item_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_thelook__inventory_items')
+                field: inventory_item_id
+
+      - name: item_status
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - Shipped
+                  - Complete
+                  - Processing
+                  - Cancelled
+                  - Returned
+
+      - name: sale_price
+        data_tests:
+          - not_null
+
+
+  - name: stg_thelook__products
+    description: "Standardized product catalog and product economics."
+    columns:
+      - name: product_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: product_cost
+        data_tests:
+          - not_null
+
+      - name: retail_price
+        data_tests:
+          - not_null
+
+      - name: distribution_center_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_thelook__distribution_centers')
+                field: distribution_center_id
+
+
+  - name: stg_thelook__users
+    description: "Analytics-safe customer attributes with unnecessary PII excluded."
+    columns:
+      - name: user_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: age
+        data_tests:
+          - not_null
+
+      - name: traffic_source
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - Search
+                  - Organic
+                  - Facebook
+                  - Email
+                  - Display
+
+
+  - name: stg_thelook__inventory_items
+    description: "Inventory-unit records containing actual item cost and fulfillment context."
+    columns:
+      - name: inventory_item_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_thelook__products')
+                field: product_id
+
+      - name: inventory_cost
+        data_tests:
+          - not_null
+
+      - name: distribution_center_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_thelook__distribution_centers')
+                field: distribution_center_id
+
+
+  - name: stg_thelook__distribution_centers
+    description: "Distribution-center reference data."
+    columns:
+      - name: distribution_center_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: distribution_center_name
+        data_tests:
+          - not_null
+
+
+  - name: stg_thelook__events
+    description: "Standardized customer behavioral event stream."
+    columns:
+      - name: event_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: session_id
+        data_tests:
+          - not_null
+
+      - name: event_type
+        data_tests:
+          - not_null
