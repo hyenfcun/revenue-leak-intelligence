@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: thelook
+    database: bigquery-public-data
+    schema: thelook_ecommerce
+    description: "Public ecommerce source data used for the Revenue Leak Intelligence project."
+
+    tables:
+      - name: orders
+      - name: order_items
+      - name: products
+      - name: users
+      - name: inventory_items
+      - name: events
+      - name: distribution_centers
