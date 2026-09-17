@@ -57,3 +57,69 @@ models:
       - name: gross_margin_pct
         data_tests:
           - not_null
+
+  - name: int_customer_lifecycle
+    description: "Customer-level lifecycle and economics model at one row per customer, combining purchase history, realized revenue, profitability, recency, acquisition source, and lifecycle classification."
+
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier derived from the source user_id."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: first_order_at
+        description: "Timestamp of the customer's first observed order."
+        data_tests:
+          - not_null
+
+      - name: last_order_at
+        description: "Timestamp of the customer's most recent observed order."
+        data_tests:
+          - not_null
+
+      - name: lifetime_orders
+        description: "Distinct number of orders placed by the customer."
+        data_tests:
+          - not_null
+
+      - name: lifetime_units
+        description: "Total number of order items associated with the customer."
+        data_tests:
+          - not_null
+
+      - name: lifetime_revenue
+        description: "Realized customer revenue excluding cancelled and returned items."
+        data_tests:
+          - not_null
+
+      - name: lifetime_cost
+        description: "Cost associated with realized customer revenue."
+        data_tests:
+          - not_null
+
+      - name: lifetime_gross_margin
+        description: "Realized revenue less associated inventory cost."
+        data_tests:
+          - not_null
+
+      - name: customer_lifecycle_stage
+        description: "Purchase-frequency lifecycle classification: New, Repeat, or Established."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - New
+                  - Repeat
+                  - Established
+
+      - name: customer_activity_status
+        description: "Recency classification relative to the latest order date in the dataset."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - Active
+                  - Dormant
