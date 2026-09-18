@@ -1,12 +1,14 @@
 version: 2
 
 models:
+
   - name: fct_revenue_leak
     description: >
       Order-item-level revenue leakage fact model used to quantify
       cancellations, returns, margin losses, and reconciled direct leakage.
 
     columns:
+
       - name: order_item_id
         description: Unique order-item identifier.
         tests:
@@ -39,4 +41,63 @@ models:
         description: Number of direct leakage signals identified for the order item.
         tests:
           - not_null
+
+
+  - name: mart_leak_priority
+    description: >
+      Category-level revenue leakage prioritization mart used to rank
+      intervention opportunities based on leakage burden, margin exposure,
+      transaction volume, and leakage frequency.
+
+    columns:
+
+      - name: product_category
+        description: Product category used as the prioritization grain.
+        tests:
+          - not_null
+          - unique
+
+      - name: total_items
+        description: Total order items represented by the category.
+        tests:
+          - not_null
+
+      - name: leaking_items
+        description: Number of order items with direct revenue leakage.
+        tests:
+          - not_null
+
+      - name: direct_leak_amount
+        description: Total reconciled direct leakage attributed to the category.
+        tests:
+          - not_null
+
+      - name: leakage_share
+        description: Share of total direct leakage contributed by the category.
+        tests:
+          - not_null
+
+      - name: leaking_item_rate
+        description: Proportion of category order items with direct leakage.
+        tests:
+          - not_null
+
+      - name: priority_score
+        description: >
+          Business prioritization score from 0 to 100 using 50% leakage burden,
+          20% margin exposure, 20% transaction volume, and 10% leakage rate.
+        tests:
+          - not_null
+
+      - name: priority_tier
+        description: Business intervention tier derived from priority score.
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - P1 - Critical Intervention
+                  - P2 - High Priority
+                  - P3 - Monitor
+                  - Low Priority
 
