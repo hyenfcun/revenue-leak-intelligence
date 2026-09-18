@@ -1,0 +1,74 @@
+{
+  "show": [
+    {
+      "traffic_source": "Search",
+      "total_items": 126522,
+      "gross_sales_value": 7539050.43,
+      "leak_items": 31368,
+      "direct_leak_amount": 1852885.98,
+      "cancellation_leakage": 1122350.85,
+      "return_leakage": 730535.13,
+      "leak_item_rate_pct": 24.79,
+      "revenue_leak_rate_pct": 24.58,
+      "leak_amount_rank": 1,
+      "leak_rate_rank": 3,
+      "total_leak_share_pct": 69.99
+    },
+    {
+      "traffic_source": "Organic",
+      "total_items": 26974,
+      "gross_sales_value": 1597918.2,
+      "leak_items": 6637,
+      "direct_leak_amount": 397605.34,
+      "cancellation_leakage": 235536.07,
+      "return_leakage": 162069.27,
+      "leak_item_rate_pct": 24.61,
+      "revenue_leak_rate_pct": 24.88,
+      "leak_amount_rank": 2,
+      "leak_rate_rank": 2,
+      "total_leak_share_pct": 15.02
+    },
+    {
+      "traffic_source": "Facebook",
+      "total_items": 10785,
+      "gross_sales_value": 635885.4,
+      "leak_items": 2751,
+      "direct_leak_amount": 159745.76,
+      "cancellation_leakage": 95498.37,
+      "return_leakage": 64247.39,
+      "leak_item_rate_pct": 25.51,
+      "revenue_leak_rate_pct": 25.12,
+      "leak_amount_rank": 3,
+      "leak_rate_rank": 1,
+      "total_leak_share_pct": 6.03
+    },
+    {
+      "traffic_source": "Email",
+      "total_items": 8904,
+      "gross_sales_value": 540992.34,
+      "leak_items": 2253,
+      "direct_leak_amount": 132317.3,
+      "cancellation_leakage": 80094.98,
+      "return_leakage": 52222.32,
+      "leak_item_rate_pct": 25.3,
+      "revenue_leak_rate_pct": 24.46,
+      "leak_amount_rank": 4,
+      "leak_rate_rank": 4,
+      "total_leak_share_pct": 5.0
+    },
+    {
+      "traffic_source": "Display",
+      "total_items": 7157,
+      "gross_sales_value": 431008.85,
+      "leak_items": 1760,
+      "direct_leak_amount": 104727.72,
+      "cancellation_leakage": 59110.16,
+      "return_leakage": 45617.56,
+      "leak_item_rate_pct": 24.59,
+      "revenue_leak_rate_pct": 24.3,
+      "leak_amount_rank": 5,
+      "leak_rate_rank": 5,
+      "total_leak_share_pct": 3.96
+    }
+  ]
+}
