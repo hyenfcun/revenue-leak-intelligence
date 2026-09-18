@@ -1,0 +1,7 @@
+baseline_leakage,estimated_recoverable_revenue,primary_leak_type,reduction_rate_pct,remaining_leakage,scenario_name
+1592590.43,79629.52,Cancellation,5.0,1512960.91,5% Cancellation Reduction
+1592590.43,159259.04,Cancellation,10.0,1433331.39,10% Cancellation Reduction
+1592590.43,318518.09,Cancellation,20.0,1274072.34,20% Cancellation Reduction
+1054691.67,52734.58,Return,5.0,1001957.09,5% Return Reduction
+1054691.67,105469.17,Return,10.0,949222.5,10% Return Reduction
+1054691.67,210938.33,Return,20.0,843753.34,20% Return Reduction

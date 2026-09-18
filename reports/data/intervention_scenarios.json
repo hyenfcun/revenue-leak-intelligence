@@ -1,0 +1,50 @@
+[
+  {
+    "baseline_leakage": 1592590.43,
+    "estimated_recoverable_revenue": 79629.52,
+    "primary_leak_type": "Cancellation",
+    "reduction_rate_pct": 5.0,
+    "remaining_leakage": 1512960.91,
+    "scenario_name": "5% Cancellation Reduction"
+  },
+  {
+    "baseline_leakage": 1592590.43,
+    "estimated_recoverable_revenue": 159259.04,
+    "primary_leak_type": "Cancellation",
+    "reduction_rate_pct": 10.0,
+    "remaining_leakage": 1433331.39,
+    "scenario_name": "10% Cancellation Reduction"
+  },
+  {
+    "baseline_leakage": 1592590.43,
+    "estimated_recoverable_revenue": 318518.09,
+    "primary_leak_type": "Cancellation",
+    "reduction_rate_pct": 20.0,
+    "remaining_leakage": 1274072.34,
+    "scenario_name": "20% Cancellation Reduction"
+  },
+  {
+    "baseline_leakage": 1054691.67,
+    "estimated_recoverable_revenue": 52734.58,
+    "primary_leak_type": "Return",
+    "reduction_rate_pct": 5.0,
+    "remaining_leakage": 1001957.09,
+    "scenario_name": "5% Return Reduction"
+  },
+  {
+    "baseline_leakage": 1054691.67,
+    "estimated_recoverable_revenue": 105469.17,
+    "primary_leak_type": "Return",
+    "reduction_rate_pct": 10.0,
+    "remaining_leakage": 949222.5,
+    "scenario_name": "10% Return Reduction"
+  },
+  {
+    "baseline_leakage": 1054691.67,
+    "estimated_recoverable_revenue": 210938.33,
+    "primary_leak_type": "Return",
+    "reduction_rate_pct": 20.0,
+    "remaining_leakage": 843753.34,
+    "scenario_name": "20% Return Reduction"
+  }
+]

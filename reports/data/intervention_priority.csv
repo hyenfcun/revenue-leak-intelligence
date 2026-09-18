@@ -1,0 +1,27 @@
+product_category,direct_leak_amount,leak_share_pct,revenue_leak_rate_pct,cancellation_leakage,return_leakage,dominant_leak_type,potential_recovery_10pct,priority_tier
+Jeans,308592.15,11.66,25.15,183492.43,125099.72,Cancellation,30859.22,Tier 1 - Act Now
+Sweaters,199511.35,7.54,24.67,122542.93,76968.42,Cancellation,19951.14,Tier 1 - Act Now
+Suits & Sport Coats,153619.72,5.8,24.63,92151.27,61468.45,Cancellation,15361.97,Tier 1 - Act Now
+Sleep & Lounge,141924.76,5.36,24.9,83427.68,58497.08,Cancellation,14192.48,Tier 1 - Act Now
+Dresses,118340.41,4.47,24.75,71488.64,46851.77,Cancellation,11834.04,Tier 1 - Act Now
+Intimates,112301.92,4.24,25.04,67883.43,44418.49,Cancellation,11230.19,Tier 1 - Act Now
+Outerwear & Coats,326789.26,12.34,24.57,197401.68,129387.58,Cancellation,32678.93,Tier 2 - Scale Fix
+Fashion Hoodies & Sweatshirts,151067.9,5.71,24.26,92161.87,58906.03,Cancellation,15106.79,Tier 2 - Scale Fix
+Swim,150788.74,5.7,23.86,91650.05,59138.69,Cancellation,15078.87,Tier 2 - Scale Fix
+Shorts,122344.45,4.62,24.02,73599.78,48744.67,Cancellation,12234.44,Tier 2 - Scale Fix
+Tops & Tees,119287.59,4.51,24.46,73138.27,46149.32,Cancellation,11928.76,Tier 2 - Scale Fix
+Active,116448.93,4.4,24.42,68829.6,47619.33,Cancellation,11644.89,Tier 2 - Scale Fix
+Pants,103595.67,3.91,24.56,58984.0,44611.67,Cancellation,10359.57,Tier 2 - Scale Fix
+Blazers & Jackets,79271.02,2.99,26.01,48647.3,30623.72,Cancellation,7927.1,Tier 3 - Investigate
+Underwear,50963.53,1.93,24.82,30090.55,20872.98,Cancellation,5096.35,Tier 3 - Investigate
+Suits,31131.47,1.18,25.18,19579.84,11551.63,Cancellation,3113.15,Tier 3 - Investigate
+Skirts,26794.86,1.01,24.96,15965.72,10829.14,Cancellation,2679.49,Tier 3 - Investigate
+Leggings,23748.94,0.9,27.03,14709.17,9039.77,Cancellation,2374.89,Tier 3 - Investigate
+Socks & Hosiery,15749.88,0.59,25.08,9811.29,5938.59,Cancellation,1574.99,Tier 3 - Investigate
+Jumpsuits & Rompers,10112.41,0.38,27.02,6295.49,3816.92,Cancellation,1011.24,Tier 3 - Investigate
+Accessories,102063.27,3.86,24.48,61019.3,41043.97,Cancellation,10206.33,Tier 4 - Monitor
+Maternity,60781.73,2.3,24.02,36338.24,24443.49,Cancellation,6078.17,Tier 4 - Monitor
+Pants & Capris,46896.46,1.77,24.12,26165.38,20731.08,Cancellation,4689.65,Tier 4 - Monitor
+Plus,40903.6,1.55,24.41,26159.88,14743.72,Cancellation,4090.36,Tier 4 - Monitor
+Socks,29688.13,1.12,23.01,18089.56,11598.57,Cancellation,2968.81,Tier 4 - Monitor
+Clothing Sets,4563.95,0.17,24.62,2967.08,1596.87,Cancellation,456.4,Tier 4 - Monitor
